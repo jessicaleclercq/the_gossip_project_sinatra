@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Welcome on the Gossip website</h1>
+    <p>Here's a list of all the gossip</p>
+
+    <% gossips.each_with_index do |gossip, index| %>
+        <a href="gossips/<%=index%>">
+          <%= index + 1 %> 
+          <%= gossip.author %> <span>: </span>
+          <%= gossip.content %>
+        </a>
+        <br>
+      <% end %>
+
+    <a href="/gossips/new/">You can create your own gossip</a>
+  </body>
+</html>
